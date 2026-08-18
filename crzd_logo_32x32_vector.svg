@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#172f72"/>
+      <stop offset="62%" stop-color="#07174b"/>
+      <stop offset="100%" stop-color="#02091f"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dffcff"/>
+      <stop offset="28%" stop-color="#28dfff"/>
+      <stop offset="55%" stop-color="#236bff"/>
+      <stop offset="80%" stop-color="#b95cff"/>
+      <stop offset="100%" stop-color="#18e9ff"/>
+    </linearGradient>
+    <linearGradient id="crystal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8ffff"/>
+      <stop offset="25%" stop-color="#36eaff"/>
+      <stop offset="55%" stop-color="#4868ff"/>
+      <stop offset="78%" stop-color="#b54dff"/>
+      <stop offset="100%" stop-color="#19e5ff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="0.7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer token ring -->
+  <circle cx="16" cy="16" r="15.25" fill="url(#bg)" stroke="url(#ring)" stroke-width="1.5"/>
+
+  <!-- Crystal energy emblem -->
+  <g filter="url(#glow)">
+    <path d="M16 4.2 L21.2 11.0 L18.6 16 L21.2 21.0 L16 27.8 L10.8 21 L13.4 16 L10.8 11 Z"
+          fill="url(#crystal)" opacity="0.95"/>
+    <path d="M16 4.2 L16 27.8 L13.4 16 Z" fill="#b9ffff" opacity="0.55"/>
+    <path d="M16 4.2 L21.2 11 L16 16 Z" fill="#38eaff" opacity="0.65"/>
+    <path d="M16 16 L21.2 21 L16 27.8 Z" fill="#8d55ff" opacity="0.65"/>
+    <path d="M16 16 L10.8 21 L16 27.8 Z" fill="#20dfff" opacity="0.42"/>
+    <path d="M16 16 L10.8 11 L16 4.2 Z" fill="#6c7dff" opacity="0.5"/>
+  </g>
+
+  <!-- Horizontal CRZD wordmark -->
+  <text x="16" y="18.45"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="7.1"
+        font-weight="700"
+        letter-spacing="-0.25"
+        fill="#f5fbff"
+        stroke="#07133b"
+        stroke-width="0.7"
+        paint-order="stroke">CRZD</text>
+
+  <!-- Small energy accents -->
+  <path d="M5.2 9.2 L7.2 8.1 M24.8 9.2 L26.8 8.1 M5.2 22.8 L7.2 23.9 M24.8 22.8 L26.8 23.9"
+        stroke="#35eaff" stroke-width="0.65" stroke-linecap="round" opacity="0.8"/>
+</svg>
